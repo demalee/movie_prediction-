@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="">
+  <title>Movie-prediction</title>
+  <!-- Favicon -->
+  <link href="assets/img/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+
+
+
+<link type="text/css"  href="{{url_for('static', filename='lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link type="text/css" href="{{url_for('static', filename='lib/flat-ui/css/flat-ui.css')}}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link  type="text/css" href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+  <!-- Argon CSS -->
+
+</head>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">Movie</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown active">
+                    <a href="{{url_for('index')}}">Home</a>
+                </li>
+                <li><a href="{{url_for('about')}}">About</a></li>
+                <li><a href="{{url_for('contact')}}">Contact</a></li>
+                {% if current_user.is_anonymous %}
+                   <li><a href="{{url_for('login')}}">Login</a></li>
+                   <li> <a href ="{{url_for('register')}}"> sign up </a></li>
+                {% else %}
+                   <li> <a  href="{{url_for('logout')}}"> sign out </a></li>
+                   <li> <a class ="btn-info">{{current_user.username}} </a></li>
+
+                {% endif %}
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+
+<!-- Flash messages  -->
+
+ 
+  {% block content %}
+
+
+  {% endblock %}
+  <!-- /Footer -->
+  <div id="copyrights">
+      <div class="container">
+          <div class="col-md-6">
+              <p>&copy; Copyrights <strong>Movie prediction</strong>. All Rights Reserved</p>
+          </div>
+          <div class="col-md-6">
+
+
+              <p>Designed and maintained by kibet</p>
+          </div>
+      </div>
+  </div>
+  <!-- / copyrights -->
+
+  <!-- JavaScript Libraries -->
+
+
+  <script type="text/javascript"  src="{{url_for('static', filename='lib/jquery/jquery.min.js')}}"></script>
+  <script type="text/javascript"  src="{{url_for('static', filename='lib/bootstrap/js/bootstrap.min.js')}}"></script>
+  <script type="text/javascript"  src="{{url_for('static', filename='lib/php-mail-form/validate.js')}}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script type="text/javascript"  src="{{url_for('static', filename='js/main.js')}}"></script>
+
+
+
+
+</body>
+</html>
+

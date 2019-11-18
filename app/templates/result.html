@@ -1,0 +1,72 @@
+{%extends 'admin-layout.html'%}
+{%block content %}
+
+  <!-- Main content -->
+  <div class="main-content">
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="card bg-secondary shadow border-0">
+              <div class="text-center text-muted mb-4">
+                  <h2>Movie results .Use of rating to predict success and failure of a movie</h2><hr>
+              </div>
+            <div class="card-body row">
+
+              <div class="col-md-7">
+              <table class ="table table-responsive">
+                  <tr>
+                      <td> Movie Title</td>
+                      <td> {{movie.get()['Title']}}</td>
+                  </tr>
+                  <tr>
+                      <td> Movie Plot</td>
+                      <td colspan="3"> {{movie.plot()}}</td>
+                  </tr><tr>
+                      <td> Languages Spoken In the Movie</td>
+                      <td>
+                          {% for lang in movie.languages() %}
+                          {{ lang }}
+                          {% endfor %}
+                      </td>
+                  </tr><tr>
+                      <td> Movie Actors</td>
+                      <td>
+                          {% for actor in movie.actors() %}
+                              {{actor}}
+                          {% endfor %}
+                      </td>
+                  </tr><tr>
+                      <td> Movie Genre</td>
+                      <td> {{movie.genre()}}</td>
+                  </tr><tr>
+                      <td> Movie Ratings</td>
+                      <td> {{movie.rating()}}</td>
+                  </tr>
+                  <tr>
+                      <td> Movie Poster</td>
+                      <td> <img style="height:80px; width:60px;" src="{{movie.poster()}}"></td>
+                  </tr>
+              </table>
+              </div>
+              <div class="col-md-5">
+                  <h2>The Movies Chart showing Success and failure percentage</h2>
+                  <div style="">
+                      <embed type="image/svg+xml" src= {{ pie|safe }} />
+                  </div>
+
+                  <p>Following the Ratings</p>
+                  <p>
+                      {% if rating > 60 %}
+                      <span class="btn btn-primary">This movie will be successful ...</span>
+                      {% else %}
+                      <span class="btn btn-danger">This movie will fail ...</span>
+                      {% endif %}
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ {% endblock %}

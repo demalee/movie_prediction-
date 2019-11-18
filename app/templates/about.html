@@ -1,0 +1,99 @@
+{% extends 'main-layout.html' %}
+
+{% block content %}
+<!-- Aboutrwrap -->
+  <div id="aboutwrap">
+    <div class="container">
+      <div class="row">
+        <h1><br/> <b>Movie prediction</b> Helps<br/> to find out if a movie will be a success or failure.</h1>
+      </div>
+    </div>
+  </div>
+  <!-- /aboutrwrap -->
+
+
+  <!-- Intro Section -->
+  <div class="container sinfo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <p><b>A Movie</b>  is also called a film or motion picture, is a combination of still images, when displayed on a screen, behaves as an illusion of moving images, it is because of the phi phenomenon. The process of movie making is both an industry and an art. Movies are a great source of entertainment and people are crazy about movies. Movie Industry produces hundreds of movies every year of different genres such as animation, war, comedy, thriller horror etc. Most of the time, people are not sure about which particular movie to look for so that their spare time is utilized in entertainment. There are many online platforms that keep track of movies like RottenTamatoes, Metacritic and Internet Movie Database (IMDb) which provide information about movies such as actors, directors, budget, as well as user ratings and comments which provide a fair information about the movie.</p>
+      </div>
+    </div>
+    <!-- /row -->
+    <hr>
+  </div>
+  <!-- /container -->
+
+
+  <!-- Leaders Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="tabbable">
+          <ul class="nav nav-stacked" id="myTab">
+            <li class="active"><a href="#tab4">Kibet</a></li>
+
+          </ul>
+          <!-- /tabs -->
+        </div>
+        <!-- /tabbable -->
+      </div>
+      <!-- /col-lg-2 -->
+
+      <div class="col-lg-10 ab">
+        <div class="tab-content">
+
+          <div class="tab-pane active" id="tab4">
+            <div class="tabmod-a">
+              <!-- FIRST PROFILE -->
+              <div class="row">
+                <div class="col-md-4">
+
+                  <h6>More About the system</h6>
+                  <br>
+                  <p> Viewers can easily decide whether to book ticket in advance or not by using this system. For doing this we have to develop a methodology in which the historical data of each component such as actor, actress, director, music that influences the success or failure of a movie is given is due to weight  and then based on multiple thresholds calculated on the basis of descriptive statistics of dataset of each component. Admin will add the film crew data. Admin will add movies data of a particular film crew. Admin will add new movie data along with film crew details as well as release date of the new movie. Based on the weight age of historical data of each film crew the movie will be labeled as success or failure.
+.</p>
+                </div>
+                <div class="col-md-8">
+                  <img class="img-responsive" src="{{url_for('static', filename='img/m1.jpg')}}" style="height: 600px; width: 500px;" alt="">
+                </div>
+              </div>
+              <!-- /row -->
+            </div>
+            <!-- /tabmod-a -->
+          </div>
+          <!-- /tab-pane -->
+
+
+          <!-- /tab-pane -->
+
+          <!-- /tab-pane -->
+        </div>
+        <!-- /tab-content -->
+
+      </div>
+      <!-- col-lg-10 -->
+    </div>
+    <!-- /row -->
+  </div>
+  <!-- /container -->
+
+
+  <!-- Spacer Section -->
+  <div id="sp1">
+    <div class="container">
+      <div class="row">
+        <br>
+        <h3>Prediction of a movie is of great importance to industry; movie makers are still never sure about whether there movie will do business or not; when they should release the movie and how to advertise it.
+.</h3>
+        <br>
+      </div>
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /sp1 -->
+
+    </div>
+    <!-- /container -->
+  </div>
+{%endblock%}

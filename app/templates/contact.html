@@ -1,0 +1,72 @@
+{% extends 'main-layout.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="row sinfo">
+      <div class="col-lg-4">
+        <h4>Our Information</h4>
+        <br>
+        <div class="cinfo">
+          <img src="{{url_for('static', filename='img/icons/clocks.svg')}}" alt="">
+        </div>
+        <p>
+          Monday to Friday <br/> Saturday
+        </p>
+        <hr>
+        <div class="cinfo">
+          <img src="{{url_for('static', filename='img/icons/rss.svg')}}" alt="">
+        </div>
+        <p>
+          Rongai<br/> Nairobi, Kenya.
+        </p>
+        <hr>
+        <div class="cinfo">
+          <img src="{{url_for('static', filename='img/icons/android.svg')}}" alt="">
+        </div>
+        <p>
+          +254 706 244 585<br/> wilsonkibet189@gmail.com
+        </p>
+        <hr>
+      </div>
+      <!-- col-lg-4 -->
+
+      <div class="col-lg-8">
+        <h4>Get in touch With Us</h4>
+
+        <br>
+
+        <form class="contact-form php-mail-form" role="form" action="" method="POST">
+
+            <div class="form-group">
+              <input type="name" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" >
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" class="form-control" id="contact-email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" name="subject" class="form-control" id="contact-subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+              <div class="validate"></div>
+            </div>
+
+            <div class="form-group">
+              <textarea class="form-control" name="message" id="contact-message" placeholder="Your Message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+              <div class="validate"></div>
+            </div>
+
+
+
+            <div class="form-send">
+              <button type="submit"   class="btn btn-large">Send Message</button>
+            </div>
+
+          </form>
+
+      </div>
+      <!-- col-lg-8 -->
+    </div>
+    <!-- row -->
+  </div>
+  <!-- container -->
+{%endblock%}

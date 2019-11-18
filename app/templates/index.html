@@ -1,0 +1,116 @@
+{% extends 'main-layout.html' %}
+{% block content %}
+
+ <!-- Headerwrap -->
+  <div id="headerwrap-2">
+    <div class="container">
+      <div class="row">
+        <h1>Movie prediction system</h1>
+      </div>
+    </div>
+  </div>
+  <!-- /Headerwrap -->
+
+  <!-- Call To Action -->
+  <div id="cta">
+    <div class="container centered">
+      <h3>Our objective.</h3>
+      <p>We mine data from different attributes and analyze the data obtained inorder to predict the success of a movie before it is released.This will enable the crew to plan and budget well and also for the watchers to decide on the booking of ticket.</p>
+      <br>
+
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /cta -->
+
+
+  <!-- Services Section -->
+  <div class="container sinfo">
+    <div class="row centered">
+      <h4>Welcome, to our <b>Movie prediction</b>, we use different algorithm to predict movie success</h4>
+      <br>
+      <br>
+      <div class="col-lg-3">
+        <p><img src="{{url_for('static', filename='img/icons/touch.svg')}}" alt=""></p>
+        <p>We mine data based on different attributes and be able analyze the data using different   algorithm.</p>
+
+      </div>
+      <!-- col-lg-3 -->
+
+      <div class="col-lg-3">
+        <p><img src="{{url_for('static', filename='img/icons/spray.svg')}}" alt=""></p>
+        <p>We aim at  helping viewers in findng out the review of the new movie.</p>
+
+      </div>
+      <!-- col-lg-3 -->
+
+      <div class="col-lg-3">
+        <p><img  src="{{url_for('static', filename='img/icons/rocket.svg')}}" alt=""></p>
+        <p>We help user to decide whether to book ticket in advance or not..</p>
+
+      </div>
+      <!-- col-lg-3 -->
+
+      <div class="col-lg-3">
+        <p><img src="{{url_for('static', filename='img/icons/pencil.svg')}}" alt=""></p>
+        <p>We aim also  to categorize movie as a failure or a success before the release..</p>
+
+      </div>
+      <!-- col-lg-3 -->
+
+    </div>
+    <!-- /row -->
+    <br>
+    <hr>
+  </div>
+  <!-- /container -->
+
+  <!-- container -->
+
+  <!-- container -->
+
+
+  <div id="g">
+    <div class="container">
+      <div class="row">
+        <h4 class="centered">Our Scope</h4>
+        <br>
+        <div class="col-md-4">
+          <div class="bc">
+            <img class="img-responsive"  src="{{url_for('static', filename='img/m1.jpg')}}"   style="height: 400px; width: 400px;"  alt="">
+            <p><a href="#">Scope 1</a></p>
+            <p> The system can  mine data from different attributes eg crew,the director ,date and use it to predict success of a movie</p>
+
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="bc">
+            <img class="img-responsive"  src="{{url_for('static', filename='img/m2.jpg')}}"  style="height: 400px; width: 400px;"  alt="">
+            <p><a href="#">Scope 2</a></p>
+            <p>User can  get the predicted analyzes and use it to decide whether to book for a movie ticket or not</p>
+
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="bc">
+            <img class="img-responsive" src="{{url_for('static', filename='img/m4.jpeg')}}" style="height: 400px; width: 400px;" alt="">
+            <p><a href="#">Scope 3</a></p>
+            <p>We can  categorize a movie as a failure or a success before the release</p>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- grey wrap -->
+
+
+    </div>
+    <!-- /container -->
+  </div>
+ {% endblock %}

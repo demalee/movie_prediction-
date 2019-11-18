@@ -1,0 +1,36 @@
+{%extends 'admin-layout.html'%}
+{%block content %}
+
+  <!-- Main content -->
+  <div class="main-content">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+          <div class="card bg-secondary shadow border-0">
+
+            <div class="card-body px-lg-5 py-lg-5">
+              <div class="text-center text-muted mb-4">
+                <h2>Enter Movie Tittle</h2><hr>
+              </div>
+
+              <form  class="form-container" action="{{url_for('movies')}}" method="POST" >
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{form.title.label}}
+                    {{form.title(class = "form-control", placeholder = "Enter movie / series title")}}
+                    {% for error in form.title.errors %}
+                    <span class ="alert alert-danger"> {{ error }}</span>
+                    {% endfor%}
+                </div>
+                <div class="text-center">
+                  {{ form.submit(class = "btn btn-large btn-primary")}}
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ {% endblock %}
